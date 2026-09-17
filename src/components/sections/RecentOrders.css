@@ -1,0 +1,92 @@
+.cell-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.thumb svg {
+  width: 18px;
+  height: 18px;
+  opacity: .5;
+}
+
+.cell-product .pname {
+  font-weight: 500;
+}
+
+.cell-product .pid {
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  background: var(--surface, #fff);
+  border-radius: var(--radius-lg, 12px);
+  padding: 28px;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.modal h3 {
+  margin: 0 0 14px;
+}
+
+.modal p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--ink-soft, #555);
+}
+
+.modal .row-actions {
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+.status.delivered { color: var(--success); }
+.status.delivered .dot { background: var(--success); }
+
+.status.processing { color: var(--pending); }
+.status.processing .dot { background: var(--pending); }
+
+.status.cancelled { color: var(--danger); }
+.status.cancelled .dot { background: var(--danger); }
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+}

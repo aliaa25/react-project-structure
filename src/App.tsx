@@ -1,12 +1,5 @@
-import AppProvider from "./providers/AppProvider";
-import AppRoutes from "./routes/AppRoutes";
+import { HomePage } from './pages/Home'
 
-function App() {
-  return (
-    <AppProvider>
-      <AppRoutes />
-    </AppProvider>
-  );
+export default function App() {
+  return <HomePage />
 }
-
-export default App;

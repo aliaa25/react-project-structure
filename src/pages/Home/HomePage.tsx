@@ -1,21 +1,31 @@
-import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/Button";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { APP_NAME } from "@/constants/config";
+import { useState } from "react";
+import Navbar from "../../components/layout/Navbar.jsx";
+import Footer from "../../components/layout/Footer.jsx";
+import Hero from "../../components/sections/Hero.jsx";
+import FeaturedProducts from "../../components/sections/FeaturedProducts.jsx";
+import RecentOrders from "../../components/sections/RecentOrders.jsx";
 
-export function HomePage() {
-  const { t } = useTranslation();
+interface Product {
+  id: number | string
+  name: string
+  price: number
+}
+
+export function Home() {
+  const [cartCount, setCartCount] = useState(0)
+
+const handleAddToCart = (product: Product) => {
+    setCartCount((count) => count + 1)
+    console.log('Added to cart:', product.name)
+  }
 
   return (
     <>
-      <Navbar />
-      <main style={{ padding: "2rem" }}>
-        <h1>{APP_NAME}</h1>
-        <p>{t("welcome")}</p>
-        <Button onClick={() => alert("Hello!")}>Click me</Button>
-      </main>
+      <Navbar cartCount={cartCount} />
+      <Hero />
+      <FeaturedProducts onAddToCart={handleAddToCart} />
+      <RecentOrders />
       <Footer />
     </>
-  );
+  )
 }

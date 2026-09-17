@@ -1,6 +1,3 @@
-// Placeholder UI shown while page content is loading (better perceived
-// performance than a bare spinner for content-heavy views).
-
 interface LoadingSkeletonProps {
   rows?: number;
 }
