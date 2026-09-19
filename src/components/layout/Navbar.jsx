@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import './Navbar.css'
 
 export default function Navbar({ cartCount = 0 }) {
   return (
     <header className="nav">
       <div className="wrap nav-row">
-        <a href="#" className="logo">LU<span>MI</span></a>
+        <Link to="/" className="logo">LU<span>MI</span></Link>
 
-        <ul className="nav-links">
-          <li><a href="#" className="active">Home</a></li>
-          <li><a href="#products">Products</a></li>
+<ul className="nav-links">
+  <li><Link to="/" className="active">Home</Link></li>
+  <li><Link to="/products">Products</Link></li>
           <li><a href="#orders">Orders</a></li>
         </ul>
 

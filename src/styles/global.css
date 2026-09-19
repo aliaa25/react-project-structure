@@ -1,3 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* shadcn/ui design tokens — used only by components/ui/* (Products feature) */
+@layer base {
+  :root {
+    --background: 60 20% 98%;
+    --foreground: 40 8% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 40 8% 12%;
+    --primary: 32 65% 48%;
+    --primary-foreground: 40 30% 98%;
+    --secondary: 40 15% 94%;
+    --secondary-foreground: 40 8% 12%;
+    --muted: 40 15% 94%;
+    --muted-foreground: 40 6% 45%;
+    --destructive: 6 55% 45%;
+    --destructive-foreground: 40 30% 98%;
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 32 65% 48%;
+    --radius: 0.5rem;
+  }
+}
+
 :root {
   --bg: #FAFAF6;
   --surface: #FFFFFF;

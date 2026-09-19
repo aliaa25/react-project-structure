@@ -6,4 +6,6 @@ export const API_BASE_URL =
 export const ROUTES = {
   HOME: "/",
   ABOUT: "/about",
+   PRODUCTS: "/products",
+  PRODUCT_DETAILS: "/products/:id",
 } as const;
